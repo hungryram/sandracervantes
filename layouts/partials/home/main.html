@@ -9,12 +9,13 @@
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body slide-content">
-    <div class="container has-text-left">
+    <div class="container has-text-centered">
       <div class="columns">
-        <div class="column is-half has-text-white">
-          <h1 class="title is-1 has-text-white">{{ .heading }}</h1>
-          {{ if .link }}<a href="{{ .link }}" class="hero-button">{{ .link_text }}</a>{{ end }}
+        <div class="column is-half has-text-white is-offset-one-quarter">
+          <h1 class="title is-1 has-text-white is-size-3-mobile">{{ .heading }}</h1>
           <p class="mt-6">{{ .hero_body }}</p>
+          <br>
+          {{ if .link }}<a href="{{ .link }}" class="hero-button">{{ .link_text }}</a>{{ end }}
         </div>
       </div>
     </div>
@@ -25,8 +26,7 @@
     <div class="container">
       <div class="columns has-text-left has-text-white is-mobile is-vcentered">
         <div class="column quicksearch">
-          <script type="text/javascript" src="https://www.idxhome.com/site/listing/search/widget/133408?style=horizontal"></script>
-          <p>Or use our <a href="http://www.idxhome.com/listing/search/advanced/133408">advanced search feature</a></p>
+          <script type="text/javascript" src="https://www.idxhome.com/site/listing/search/widget/{{ $.Site.Data.idx.ihomefinder_client_id }}?style=horizontal"></script>
         </div>
       </div>
       </div>

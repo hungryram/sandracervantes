@@ -1,26 +1,28 @@
 {{ $bio := .Site.Data.home.agent_bio }}
-<div class="about-container" style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(uploads/background3.jpg) no-repeat center;background-size:cover;padding-top:5%;padding-bottom:5%;">
+<div class="about-container">
 <div class="section">
     <div class="container">
         <div class="columns is-vcentered">
-            <div class="column has-text-centered">
+            <div class="column is-3 has-text-centered">
                 {{ if $bio.photo }}
-                <img src="{{ $bio.photo }}" alt="" class="about-home-image">
+                <img src="{{ $bio.photo }}" alt="Sandra Cervantes Realtor" class="about-home-image" width="200">
                 {{ end }}
             </div>
             <div class="column">
-                <div class="content">
+                <div class="content-bio">
                     {{ if $bio.heading }}
-                        <h1 class="title is-1 is-size-3-mobile has-text-white is-uppercase">{{ $bio.heading }}</h1>
+                        <h1 class="title is-1 is-size-3-mobile has-text-white primary-title">{{ $bio.heading }}</h1>
                     {{ end }}
-                    {{ if $bio.heading }}
-                        <p class="has-text-white is-size-5 mb-6">{{ $bio.subtitle }}</p>
-                    {{ end }}
-                    {{ if $bio.body_text }}
-                    <p style="color: #ccc">{{ $bio.body_text }}</p>
-                    {{ end }}
+                    <div class="columns">
+                        <div class="column">
+                            <p class="content" style="color: #ccc">Sandra Cervantes is a visionary with the business acumen to take a deal from conception to fruition. Ms. Cervantes is a highly successful real estate business owner and investor with an uncanny ability to bring together the right people in the right places at the right time. She believes when convenience and opportunity coincide – the synergy is infinite.</p>
+                        </div>
+                        <div class="column">
+                            <p style="color: #ccc">The National Association of Hispanic Real Estate Professionals (NAHREP) has recognized Cervantes as one of the top 250 real estate professional in the nation. She has worked in the field of housing and community development throughout her career and is an advocate on home ownership education and sustainability issues.</p>
+                        </div>
+                    </div>
                     {{ if $bio.link }}
-                        <a href="{{ $bio.link }}" class="about-btn">{{ $bio.link_text }}</a>
+                        <a href="{{ $bio.link }}" class="primary-btn">{{ $bio.link_text }}</a>
                     {{ end }}
                 </div>
             </div>
