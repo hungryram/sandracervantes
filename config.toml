@@ -2,12 +2,17 @@ baseURL = "https://pagani.netlify.app/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
+name = "Featured Properties"
+parent = "Property Search"
+url = "https://www.idxhome.com/featured/133408"
+weight = 1
+[[menu.main]]
 name = "Login"
 url = "https://www.idxhome.com/homesearch/145641"
-weight = 10
+weight = 8
 [[menu.main]]
 name = "Resources"
-weight = 7
+weight = 5
 [[menu.main]]
 name = "Valuation Request"
 parent = "Sellers"
@@ -15,45 +20,36 @@ url = "http://www.idxhome.com/valuation/133408"
 weight = 1
 [[menu.main]]
 name = "Sellers"
-weight = 6
+weight = 4
 [[menu.main]]
 name = "Buyers"
-weight = 5
-[[menu.main]]
-name = "Property Organizer"
-parent = "Buyers & Sellers"
-url = "http://www.idxhome.com/organizer/login/133408"
 weight = 3
 [[menu.main]]
 name = "Open Homes"
 parent = "Property Search"
 url = "http://www.idxhome.com/openhomes/133408"
-weight = 3
+weight = 4
 [[menu.main]]
 name = "Advanced Search"
 parent = "Property Search"
 url = "http://www.idxhome.com/listing/search/advanced/133408/13"
-weight = 2
+weight = 3
 [[menu.main]]
 name = "Search"
 parent = "Property Search"
 url = "http://www.idxhome.com/homesearch/133408"
-weight = 1
+weight = 2
 [[menu.main]]
 name = "Contact"
 url = "/contact"
-weight = 9
+weight = 7
 [[menu.main]]
 name = "Property Search"
-weight = 4
+weight = 2
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
-[[menu.main]]
-name = "Featured Properties"
-url = "https://www.idxhome.com/featured/133408"
-weight = 2
 [taxonomies]
 category = "categories"
 city = "city"
