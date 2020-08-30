@@ -1,0 +1,48 @@
+ <!-- Hero head: will stick at the top -->
+ <div class="hero-head">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{ .Site.BaseURL }}">
+          {{ if .Site.Data.design.logo_and_title.logo }}
+            <img src="{{ .Site.Data.design.logo_and_title.logo | absURL }}" alt="">
+          {{ else }}
+          <h1 class="title is-3">{{ .Site.Data.design.logo_and_title.site_title }}</h1>
+          {{ end }}
+        </a>
+        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </div>
+      <div id="navbarMenuHeroA" class="navbar-menu">
+        <div class="navbar-end">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+          <div class="navbar-item has-dropdown is-hoverable main-drop">
+              <a class="navbar-link" href="javascript:;">
+                  {{ .Name }}
+              </a>
+              <!-- First Level Dropdown -->
+                  <div class="navbar-dropdown">
+                      {{ range .Children }}
+                          
+                          <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                          {{ .Name }}
+                          </a>
+                      
+                      {{ end }}
+                </div>
+                <!-- End first level Dropdown -->
+          </div>
+          {{ else }} <!-- Else No Drop Down-->
+          <a href="{{ .URL |absURL }}" class="navbar-item">{{ .Name }}</a>
+      {{ end }}
+      {{ end }} <!-- End range menu -->
+    </div>
+  </div>
+    </div>
+  </nav>
+</div>

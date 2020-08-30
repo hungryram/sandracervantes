@@ -1,0 +1,31 @@
+{{ $teamTitle := .Site.Data.home.team }}
+<div class="bg-overlay">
+    <div class="section">
+        <div class="container">
+            <div class="columns lax team-border">
+                <div class="column is-half has-text-left">
+                    {{ if $teamTitle.subtitle }}
+                        <h5 class="subtitle is-5 is-uppercase">{{ $teamTitle.subtitle }}</h5>
+                    {{ end }}
+                    {{ if $teamTitle.heading }}
+                    <h1 class="title is-1 pb-6 pt-5 has-text-black team-border">{{ $teamTitle.heading }}</h1>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="responsive team-carousel">
+                {{ range (where $.Site.RegularPages "Type" "team") }}
+                <div class="column">
+                    <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url({{ .Params.details.agent_photo }}) no-repeat center;background-size:cover;height:400px">
+                        <div class="featured-team-content">
+                            <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
+                            <p>{{ .Params.contact.cell }}</p>
+                            <p>{{ .Params.contact.email }}</p>
+                            <a href="{{ .Permalink }}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

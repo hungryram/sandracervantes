@@ -1,0 +1,92 @@
+/* IDX HOME SCROLL */
+
+div#ihf-main-container .thumbnail {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 70px;
+}
+
+img.ihf-slider-img {
+    width: 600px;
+    object-fit: cover;
+}
+
+div.col-xs-12.address.gallery-address{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+div#ihf-main-container a {
+    color: #000;
+    font-size: 1rem;
+    text-transform: capitalize;
+
+
+}
+
+div#ihf-main-container a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+div.row.gallery-prop-info {
+    text-align: center!important;
+    margin: 0 auto;
+}
+
+div#ihf-main-container .col-xs-6,
+#ihf-main-container > div > div.row.ihf-vcenter > div > div > div.ihf-slide.cycle-slide.cycle-slide-active > div > div:nth-child(1) > div > div.row.gallery-prop-info > div:nth-child(2) {
+    text-align:center!important;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+div#ihf-main-container .pagination>li>a, #ihf-main-container .pagination>li>span {
+    background: transparent;
+}
+
+div#ihf-main-container .glyphicon-chevron-left:before,
+    div#ihf-main-container .glyphicon-chevron-right:before {
+    font-size: 14px;
+}
+
+/* HOME QUICK SEARCH */
+#searchProfile > fieldset > div > div:nth-child(3),
+#searchProfile > fieldset > div > div:nth-child(4),
+#searchProfile > fieldset > div > div:nth-child(5),
+#searchProfile > fieldset > div > div:nth-child(6),
+#searchProfile > fieldset > div > div.col-xs-12.col-sm-1 > label,
+#searchProfile > fieldset > div > div.col-xs-12.col-sm-3 > label {
+    display: none;
+}
+
+div#ihf-main-container .form-control,
+div#ihf-main-container input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0px!important;
+    outline: none;
+    box-shadow: none;
+}
+
+div#ihf-main-container .btn-primary, .ihf-main-container .btn-primary {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 50px;
+    height:50px;
+    transition: background .3s ease;
+}
+
+div#ihf-main-container .btn-primary:hover, .ihf-main-container .btn-primary:hover {
+    background: #C69C6D;
+    transition: background .3s ease;
+}
+
+@media screen and (max-width:768px){
+    button#ihf-quicksearch-submit3 {
+        margin-top: 20px!important;
+    }
+}

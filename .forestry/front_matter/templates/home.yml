@@ -1,0 +1,134 @@
+---
+label: Home
+hide_body: true
+fields:
+- name: team
+  type: field_group
+  config: {}
+  fields:
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  label: Team
+- name: agent_bio
+  type: field_group
+  config: {}
+  fields:
+  - name: photo
+    type: file
+    config:
+      maxSize: 64
+    label: Photo
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: link_text
+    type: text
+    config:
+      required: false
+    label: Link Text
+  label: Agent Bio
+- name: featured_listing
+  type: field_group
+  config: {}
+  fields:
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  label: Featured Listing
+- name: featured_section
+  type: field_group
+  config: {}
+  fields:
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Body
+  - name: link_text
+    type: text
+    config:
+      required: false
+    label: Link Text
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: first_featured
+    type: field_group
+    config: {}
+    fields:
+    - name: image
+      type: file
+      config:
+        maxSize: 64
+      label: Image
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: subtitle
+      type: text
+      config:
+        required: false
+      label: Subtitle
+    - name: link
+      type: text
+      config:
+        required: false
+      label: Link
+    label: First Featured
+  label: Featured Section
+pages:
+- data/home.yaml

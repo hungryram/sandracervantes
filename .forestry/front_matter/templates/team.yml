@@ -1,0 +1,192 @@
+---
+label: Team
+hide_body: false
+fields:
+- name: weight
+  type: number
+  label: Order to Appear
+  default: 50
+  required: true
+  config:
+    min: 1
+    max: 
+    step: 
+  description: Arrange what team displays first. Enter 1 to be at the top of the list.
+- name: title
+  type: text
+  config:
+    required: false
+  label: Full Name
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: cell
+    type: text
+    config:
+      required: false
+    label: Cell
+  label: Contact
+- name: details
+  type: field_group
+  config: {}
+  fields:
+  - name: agent_photo
+    type: file
+    config:
+      maxSize: 5
+    label: Agent Photo
+  - name: license_type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - DRE License
+      - BRE License
+      - License Number
+      - Licensed Real Estate Broker
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: License Type
+  - name: license_number
+    type: text
+    config:
+      required: false
+    label: License Number
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+    description: The position of the team member
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+  - name: office
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: offices
+        file: 
+        path: 
+    label: Office
+  - name: specialty
+    type: tag_list
+    default: []
+    label: Specialty
+    description: List of specialties
+  - name: languages
+    type: tag_list
+    default: []
+    label: Languages
+  label: Details
+- name: social_media
+  type: field_group
+  config: {}
+  fields:
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: youtube
+    type: text
+    config:
+      required: false
+    label: Youtube
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: Linkedin
+  - name: pinterest
+    type: text
+    config:
+      required: false
+    label: Pinterest
+  - name: zillow
+    type: text
+    config:
+      required: false
+    label: Zillow
+  - name: redfin
+    type: text
+    config:
+      required: false
+    label: Redfin
+  - name: realtor
+    type: text
+    config:
+      required: false
+    label: Realtor
+  - name: trulia
+    type: text
+    config:
+      required: false
+    label: Trulia
+  - name: reddit
+    type: text
+    config:
+      required: false
+    label: Reddit
+  label: Social Media
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+pages:
+- content/team/andrew-garrison.md
+- content/team/angelica-ulloa.md
+- content/team/art-hernandez.md
+- content/team/bianca-miramontes.md
+- content/team/brenda-vaca.md
+- content/team/crystal-pagani.md
+- content/team/demis-dokhanian.md
+- content/team/erica-martinez.md
+- content/team/eva-konyari.md
+- content/team/frank-chavez.md
+- content/team/jerry-cervantes.md
+- content/team/john-pagani.md
+- content/team/lance-washington.md
+- content/team/maria-elena-camacho.md
+- content/team/marielena-martinez-mejia.md
+- content/team/mark-galaviz.md
+- content/team/sergio-aranda.md
+- content/team/sonia-hernandez.md
+- content/team/stacey-guerrero.md

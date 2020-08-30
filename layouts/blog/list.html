@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<div class="section">
+    <div class="container">
+        <div class="columns pb-6">
+            <div class="column is-half is-offset-one-quarter has-text-centered page-title">
+                <h1 class="title is-2">The Latest Real Estate <span>News</span></h1>
+                <p>{{ .Site.Data.pageconfig.blog_page.body_text }}</p>
+            </div>
+        </div>
+        <div class="columns is-variable is-8">
+            <div class="column is-8">
+                {{ $paginator := .Paginate (where .Pages "Type" "blog") 2 }}
+                {{ range $paginator.Pages }}
+                <div class="content">
+                    <img src="{{ .Params.featured_image }}" alt="">
+                    <div class="columns mx-2 pt-4 pb-6">
+                        <div class="column is-3 has-text-centered blog-date">
+                            <h1 class="title is-1 mb-0">{{.Date.Format "2" }}</h1>
+                            <h1 class="title is-1 mt-0">{{.Date.Format "Jan" }}</h1>
+                        </div>
+                        <div class="column blog-summary">
+                            {{ if .Params.author }}
+                            {{ with .Site.GetPage .Params.author }}
+                            <h6 class="subtitle is-6">By {{ .Title }}</h6>
+                            {{ end }}
+                            {{ end }}
+                            <h1 class="title is-2">{{.Title}}</h1>
+                            {{ .Summary | markdownify }}...
+                            <a href="{{ .Permalink }}" class="blog-btn">Read more</a>
+
+                        </div>
+                    </div>
+
+                </div>
+                {{ end }}
+                    {{ partial "templates/pagination" . }}
+            </div>
+            
+
+{{ partial "templates/sidebar.html" . }}
+
+        </div>
+    </div>
+</div>
+
+{{ end }}

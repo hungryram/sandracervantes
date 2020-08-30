@@ -1,0 +1,22 @@
+---
+logo_and_title:
+  logo: "/uploads/wallstlogo1.png"
+  site_title: Wallstreet Realty
+  favicon: "/uploads/logo.png"
+home_slideshow:
+  slideshow:
+  - heading: Wallstreet Realty
+    image: "/uploads/splash4.jpg"
+    link_text: Find your dream home
+    link: http://www.idxhome.com/homesearch/133408
+    subtitle: ''
+    hero_body: Our philosophy is different than that of a franchised real estate company
+      because we realize each property is unique.
+banner:
+  image: "/uploads/whiteinterior.jpg"
+footer:
+  footer_logo: "/uploads/wallstlogo1.png"
+  footer_bio: We take pride in providing our clients with exceptional service and
+    competitive rates in a no pressure environment. Our agents are selected for their
+    attentiveness to clients, their knowledge of the communities we service, and their
+    commitment to you – the real estate consumer.

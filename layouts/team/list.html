@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns pb-6">
+            <div class="column is-half is-offset-one-quarter has-text-centered page-title">
+                <h1 class="title is-2">Meet the <span>Team</span></h1>
+                <p>With years of experience, our team is uniquely positioned to cover luxury real estate in the surrounding Los Angeles area.</p>
+            </div>
+        </div>
+        <div class="columns is-multiline is-variable is-4">
+            {{ range .Pages }}
+            <div class="column is-3 pb-6">
+                <div class="featured-team has-text-centered" style="background:linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.7)),url({{ .Params.details.agent_photo }}) no-repeat center;background-size:cover;height:500px">
+                    <div class="featured-team-content">
+                        <h1 class="title is-4 has-text-white">{{ .Title }}</h1>
+                        <p>{{ .Params.contact.cell }}</p>
+                        <p>{{ .Params.contact.email }}</p>
+                        <a href="{{ .Permalink }}">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

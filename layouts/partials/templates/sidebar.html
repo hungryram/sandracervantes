@@ -1,0 +1,29 @@
+<div class="column">
+  <h2 class="title is-5">More Posts<h2>
+
+    {{ range shuffle ( where $.Site.RegularPages "Type" "blog") | first 2 }}
+    <article class="media">
+        {{ if .Params.featured_image }}
+        <div class="media-left">
+          <figure class="image is-96x96">
+            <img src="{{ .Params.featured_image }}" alt="Image">
+          </figure>
+        </div>
+        {{end}}
+        <div class="media-content">
+          <div class="content">
+              <h1 class="title is-6" style="margin: 0;">{{ .Params.title }}</h1>
+              <time><small>{{.Date.Format "Jan 2, 2006" }}</small></time><br>
+              <a href="{{ .Permalink }}" class="blog-btn">Continue Reading</a>
+        </div>
+    </article>
+    {{end}}
+    <h2 class="title is-5">Categories<h2>
+        <ul class="blog-categories">
+            {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+          <li>
+            <a href="/categories{{ $name | urlize | relURL }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+          </li>
+          {{end}}
+        </ul>
+</div>

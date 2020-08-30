@@ -1,0 +1,61 @@
+---
+label: Blog
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: featured_image
+  type: file
+  config:
+    maxSize: 5
+  label: Featured Image
+- name: author
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: team
+      file: 
+      path: 
+  label: Author
+- name: categories
+  type: tag_list
+  default: []
+  label: Categories
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: date
+  type: datetime
+  label: Date Published
+  description: ''
+  config:
+    required: false
+    date_format: MM/DD/YYYY
+    time_format: 
+    display_utc: false
+    export_format: ''
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+- name: url
+  type: include
+  config: {}
+  template: url
+  label: URL
+pages:
+- content/blog/warm-colors.md

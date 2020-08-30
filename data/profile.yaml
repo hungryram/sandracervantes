@@ -1,0 +1,31 @@
+---
+primary_company_name: Wallstreet Realty
+primary_contact:
+  full_name: John Pagani
+  title: Broker
+  mobile_phone: ''
+  email: john@wallstrealty.com
+  license_type: BRE License
+  license_number: '01926616'
+  phone: "(562) 222-8841"
+social_accounts:
+  instagram: https://www.instagram.com/wallstreet_realty/
+  facebook: http://www.facebook.com/wallstreetrealty
+  youtube: https://www.youtube.com/channel/UCUfZFe5DjSONvViNVFBrsGA
+  twitter: http://www.twitter.com/wallstreetr
+  linkedin: https://www.linkedin.com/company/wallstreet-realty/
+  pinterest: ''
+  zillow: ''
+  redfin: ''
+  realtor: ''
+  trulia: ''
+  reddit: ''
+search_engine_optimization:
+  title_tag: Wallstreet Realty
+  meta_description: 'The #1 Luxury Real Estate Company in Southern California! Located
+    in Beverly Hills, California'
+location_information:
+  address: 7007 Washington Blvd Suite 211
+  city: Whittier
+  state: California
+  zip_code: 90602

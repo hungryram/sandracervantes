@@ -1,0 +1,320 @@
+---
+label: Property
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Enter the full address as the title.<br><em>123 street address City,
+    State Zip</em>
+- name: address
+  type: text
+  config:
+    required: false
+  label: Address
+- name: city
+  type: text
+  config:
+    required: false
+  label: City
+- name: states
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Alabama
+    - Alaska
+    - Arizona
+    - Arkansas
+    - California
+    - Colorado
+    - Connecticut
+    - Delaware
+    - Florida
+    - Georgia
+    - Hawaii
+    - Idaho
+    - Illinois
+    - Indiana
+    - Iowa
+    - Kansas
+    - Kentucky
+    - Louisiana
+    - Maine
+    - Maryland
+    - Massachusetts
+    - Michigan
+    - Minnesota
+    - Mississippi
+    - Missouri
+    - Montana
+    - Nebraska
+    - Nevada
+    - New Hampshire
+    - New Jersey
+    - New Mexico
+    - New York
+    - North Carolina
+    - North Dakota
+    - Ohio
+    - Oklahoma
+    - Oregon
+    - Pennsylvania
+    - Rhode Island
+    - South Carolina
+    - South Dakota
+    - Tennessee
+    - Texas
+    - Utah
+    - Vermont
+    - Virginia
+    - Washington
+    - West Virginia
+    - Wisconsin
+    - Wyoming
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: State
+- name: zip
+  type: text
+  config:
+    required: false
+  label: Zip
+- name: status
+  type: select
+  default: ''
+  config:
+    required: true
+    options:
+    - Sold
+    - Active
+    - Pending
+    - Available
+    - Negotiating
+    - In Contract
+    - Coming Soon
+    - Auction
+    - Rental
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Property Status
+- name: weight
+  type: number
+  label: Price
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 
+    step: 
+    required: true
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Acreage/Land
+    - Commercial
+    - Condo
+    - Townhome
+    - Co-op
+    - Duplex
+    - Farmland
+    - Farmranch
+    - Cabin
+    - Mobile Home
+    - Multi-family
+    - New Construction
+    - Rental
+    - Single Family
+    - Time Share
+    - Vacation Home
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Property Type
+- name: listing_agent
+  type: field_group
+  config: {}
+  fields:
+  - name: listing_agent
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: team
+        file: 
+        path: 
+    label: Listing Agent
+    description: The agent assigned to this listing. Add agent under the "Teams and
+      Office" tab
+  - name: co_list
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: team
+        file: 
+        path: 
+    label: Co-Listing Agent
+  label: Listing Agent
+- name: details
+  type: field_group
+  config: {}
+  fields:
+  - name: mls_number
+    type: text
+    config:
+      required: false
+      min: 0
+    label: MLS Number
+  - name: square_footage
+    type: text
+    description: ''
+    default: 0
+    config:
+      min: 0
+      max: 
+      step: 
+    label: Square Footage
+  - name: lot_size
+    type: text
+    label: Lot Size
+    description: ''
+    default: 0
+    config:
+      min: 0
+      max: 
+      step: 
+  - name: year_built
+    type: text
+    label: Year Built
+    description: ''
+    default: 0
+    config:
+      min: 0
+      max: 
+      step: 
+  - name: bedrooms
+    type: text
+    label: Bedrooms
+    description: ''
+    default: 0
+    config:
+      min: 0
+      max: 
+      step: 
+  - name: bathrooms
+    type: text
+    label: Bathrooms
+    description: ''
+    default: 0
+    config:
+      min: 0
+      max: 
+      step: 
+      required: false
+  - name: hoa
+    type: text
+    label: HOA
+    description: Enter 0 if none.
+    default: 0
+  - name: garage
+    type: text
+    label: Garage
+    description: Enter 0 if none
+    default: 0
+  label: Details
+- name: photos
+  type: field_group
+  config: {}
+  fields:
+  - name: main_photo
+    type: file
+    config:
+      maxSize: 5
+    label: Main Photo
+    default: "/uploads/main-house-photo.jpg"
+    description: Photos that are larger in size will take time to upload. We recommend
+      using optimized photos.
+  - name: gallery
+    type: image_gallery
+    config: {}
+    label: Gallery
+    description: <strong>Photography Tips<br></strong>Photos make your website and
+      listing more appealing. Below are easy tips to make sure your listing stand
+      out.<br><br><strong>1.</strong> <strong>Prepare the Room </strong>- Make sure
+      areas and surfaces are cleared off.<br><strong>2. Wide-Angle Lens</strong> -
+      Show more of a room than using regular lens.<br><strong>3. Straight Shot</strong>
+      - Keep camera lined up with the walls and any vertical objects for a clean shot.<br><br>Need
+      professional photos and videos? <a href="https://hungryram.com/contact" title=""
+      target="_blank">Contact us</a> and we'll connect you to a professional near
+      you.
+  label: Photos
+- name: tools
+  type: field_group
+  config: {}
+  fields:
+  - name: matterport_link
+    type: text
+    config:
+      required: false
+    label: Matterport Virtual Tour Link
+    description: i.e. https://my.matterport.com/show/?m=xxxxxxxxxxx
+  - name: youtube_link
+    type: text
+    config:
+      required: false
+    label: Youtube Link
+    description: copy the last string in the URL<br>i.e https://www.youtube.com/watch?v=<strong>xxxxxxxxxxx</strong>
+  - name: open_house_date
+    type: text
+    config:
+      required: false
+    label: Open House Date
+    default: No Open House Available
+  - name: open_house_details
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Open House Details
+    description: Add additional details/instructions for the open house
+  - name: file_attachments
+    type: image_gallery
+    config: {}
+    label: File Attachments
+    description: Add additional files for visitors to download about the listing.
+  label: Tools
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization

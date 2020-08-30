@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-three-fifths is-offset-one-fifth content blog-content">
+                <img src="{{ .Params.featured_image }}" alt="">
+                <h1 class="title is-2 mt-6 pt-4">{{ .Title }}</h1>
+                {{ .Content }}
+                <div class="author-blog mt-6 pt-6">
+                    {{ if .Params.author }}<p>
+                        {{ with .Site.GetPage .Params.author }}
+                        <div class="columns">
+                            <div class="column is-4 has-text-centered">
+                                <img src="{{ .Params.details.agent_photo }}" alt="{{ .Title }}" width="200">
+                            </div>
+                            <div class="column content">
+                                <h4 class="title is-3 has-text-black">{{ .Title }}</h4>
+                                <h6 class="subtitle is-6">{{ .Params.details.title }}</h6>
+                                <p>{{ .Summary }} <a href="{{ .Permalink }}" class="blog-btn">Read More</a>
+                                </p>
+                            </div>
+                        </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

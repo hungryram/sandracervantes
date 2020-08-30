@@ -1,0 +1,18 @@
+---
+label: SEO
+hide_body: true
+fields:
+- name: title_tag
+  type: text
+  config:
+    required: false
+  label: Title Tag
+- name: meta_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Meta Description

@@ -1,0 +1,17 @@
+---
+label: Pages
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: seo
+  type: include
+  config: {}
+  template: seo
+  label: SEO
+pages:
+- content/about.md
+- content/accessibility.md

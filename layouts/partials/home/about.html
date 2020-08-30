@@ -1,0 +1,31 @@
+{{ $bio := .Site.Data.home.agent_bio }}
+<div class="about-container" style="background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(uploads/background3.jpg) no-repeat center;background-size:cover;padding-top:5%;padding-bottom:5%;">
+<div class="section">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column has-text-centered">
+                {{ if $bio.photo }}
+                <img src="{{ $bio.photo }}" alt="" class="about-home-image">
+                {{ end }}
+            </div>
+            <div class="column">
+                <div class="content">
+                    {{ if $bio.heading }}
+                        <h1 class="title is-1 is-size-3-mobile has-text-white is-uppercase">{{ $bio.heading }}</h1>
+                    {{ end }}
+                    {{ if $bio.heading }}
+                        <p class="has-text-white is-size-5 mb-6">{{ $bio.subtitle }}</p>
+                    {{ end }}
+                    {{ if $bio.body_text }}
+                    <p style="color: #ccc">{{ $bio.body_text }}</p>
+                    {{ end }}
+                    {{ if $bio.link }}
+                        <a href="{{ $bio.link }}" class="about-btn">{{ $bio.link_text }}</a>
+                    {{ end }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

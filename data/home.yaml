@@ -1,0 +1,38 @@
+---
+team:
+  subtitle: Let us help you
+  heading: Our team of professionals
+agent_bio:
+  photo: "/uploads/john15444.jpg"
+  heading: John Pagani
+  subtitle: Wallstreet Realty
+  link: "/about"
+  body_text: Our philosophy is different than that of a franchised real estate company
+    because we realize each property is unique. Buyers and Sellers deserve our undivided
+    attention. Marketing plans should be flexible, commissions negotiable depending
+    upon the transaction, and the customer’s satisfaction should always be the goal.
+    We are dedicated to guiding you through the entire selling or buying process to
+    assure that your expectations are exceeded each and every time you place your
+    trust in Wallstreet Realty. We are using cutting edge technologies and maintaining
+    professional relationships to sell your property in a shorter period of time.
+    Wallstreet Realty is an easily recognized name for buyers and sellers.
+  link_text: Read more
+featured_listing:
+  subtitle: Exlusive Homes
+  heading: Luxury Homes in Los Angeles
+featured_section:
+  link: "http://www.idxhome.com/organizer/login/133408"
+  first_featured:
+    image: "/uploads/shutterstock_150649961.jpg"
+    heading: 
+    link: "http://www.idxhome.com/organizer/login/133408"
+    subtitle: Office Listings
+  second_featured:
+    image: "/uploads/shutterstock_644446420.jpg"
+    heading: Featured
+    subtitle: View Our Office Listings
+    link: "/status/sold"
+  subtitle: Property organizer
+  heading: Track your favorited homes
+  body: Save properties you're interested in and track new listings that fit your criteria. Using our registration tools, you'll be able to contact any of our ages for information on properties that interests you.
+  link_text: Learn more

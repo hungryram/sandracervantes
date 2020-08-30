@@ -1,0 +1,16 @@
+---
+label: IDX Config
+hide_body: true
+fields:
+- name: ihomefinder_client_id
+  type: number
+  label: Ihomefinder Client ID
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+pages:
+- data/idx.yaml

@@ -1,0 +1,78 @@
+{{ $footerContact := .Site.Data.profile.primary_contact }}
+{{ $footerDesign := .Site.Data.design.footer }}
+{{ $footerSocial := .Site.Data.profile.social_accounts }}
+<footer class="footer">
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-4">
+        {{ if $footerDesign.footer_logo }}
+          <img src="{{ $footerDesign.footer_logo | absURL }}" alt="{{ .Site.Data.profile.primary_company_name }}" width="150px" class="mb-5">
+        {{ else }}
+        {{ end }}
+        <h2 class="title is-6 mb-0 has-text-white"></h2>
+        <p>{{ $footerContact.license_type }} {{ $footerContact.license_number }}</p>
+        {{ if $footerDesign.footer_bio }}
+          <p class="pb-6">{{ $footerDesign.footer_bio }}</p>
+        {{ end }}
+      </div>
+      <div class="column">
+        <h4 class="title is-6 has-text-white is-uppercase">Social</h4>
+        <ul>
+          {{ if $footerSocial.facebook }}<li><a href="{{ $footerSocial.facebook }}" target="_blank">Facebook</a></li>{{ end }}
+          {{ if $footerSocial.instagram }}<li><a href="{{ $footerSocial.instagram }}" target="_blank">Instagram</a></li>{{ end }}
+          {{ if $footerSocial.twitter }}<li><a href="{{ $footerSocial.twitter }}" target="_blank">Twitter</a></li>{{ end }}
+          {{ if $footerSocial.pinterest }}<li><a href="{{ $footerSocial.pinterest }}" target="_blank">Pinterest</a></li>{{ end }}
+          {{ if $footerSocial.youtube }}<li><a href="{{ $footerSocial.youtube }}" target="_blank">Youtube</a></li>{{ end }}
+          {{ if $footerSocial.linkedin }}<li><a href="{{ $footerSocial.linkedin }}" target="_blank">Linkedin</a></li>{{ end }}
+          {{ if $footerSocial.zillow }}<li><a href="{{ $footerSocial.zillow }}" target="_blank">Zillow</a></li>{{ end }}
+          {{ if $footerSocial.redfin }}<li><a href="{{ $footerSocial.redfin }}" target="_blank">Redfin</a></li>{{ end }}
+          {{ if $footerSocial.realtor }}<li><a href="{{ $footerSocial.realtor }}" target="_blank">Realtor</a></li>{{ end }}
+          {{ if $footerSocial.reddit }}<li><a href="{{ $footerSocial.reddit }}" target="_blank">Reddit</a></li>{{ end }}
+          {{ if $footerSocial.trulia }}<li><a href="{{ $footerSocial.trulia }}" target="_blank">Trulia</a></li>{{ end }}
+          {{ if $footerSocial.yelp }}<li><a href="{{ $footerSocial.yelp }}" target="_blank">Yelp</a></li>{{ end }}
+        </ul>
+      </div>
+      <div class="column">
+        <h4 class="title is-6 has-text-white is-uppercase">Links</h4>
+        <ul>
+          <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+          <li><a href="/listings">Listings</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/status/sold">Sold</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4 class="title is-6 has-text-white is-uppercase">Contact</h4>
+            <p><a href="mailto:{{ $footerContact.email }}">{{ $footerContact.email }}</a></p>
+            <p><a href="tel:{{ $footerContact.phone }}" class="has-text-white">{{ $footerContact.phone }}</a></p>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column has-text-centered-mobile">
+        <small>&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.primary_company_name }}</small> &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a>
+      </div>
+      <div class="column has-text-centered-mobile">
+        <ul>
+          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
+          <li class="is-inline-block mr-4"><a href="">Accessibility</a></li>
+          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+{{ if not $.IsHome }}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{{ end }}
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+<script src="{{.Site.BaseURL}}/js/main.js"></script>
+</body>
+</html>

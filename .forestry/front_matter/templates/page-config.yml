@@ -1,0 +1,85 @@
+---
+label: Page Config
+hide_body: false
+fields:
+- name: contact_page
+  type: field_group
+  config: {}
+  fields:
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Contact Page
+- name: listing_page
+  type: field_group
+  config: {}
+  fields:
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Listings Page
+- name: team_page
+  type: field_group
+  config: {}
+  fields:
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Team Page
+- name: blog_page
+  type: field_group
+  config: {}
+  fields:
+  - name: body_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body Text
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Blog Page
+- name: enable_seo
+  type: boolean
+  label: Enable SEO Page Config
+  hidden: true
+  default: true

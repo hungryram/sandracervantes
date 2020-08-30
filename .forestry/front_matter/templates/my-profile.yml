@@ -1,0 +1,225 @@
+---
+label: My Profile
+hide_body: true
+fields:
+- name: primary_company_name
+  type: text
+  config:
+    required: false
+  label: Company Name
+- name: primary_contact
+  type: field_group
+  config: {}
+  fields:
+  - name: full_name
+    type: text
+    config:
+      required: true
+    label: Full Name
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: phone
+    type: text
+    config:
+      required: false
+    label: Phone
+  - name: mobile_phone
+    type: text
+    config:
+      required: false
+    label: Mobile Phone
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+    description: Please contact the <a href="https://hungryram.com" title="" target="_blank">developer
+      </a>if you need to change email notifications.
+  - name: license_type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - DRE License
+      - BRE License
+      - License Number
+      - Licensed Real Estate Broker
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: License Type
+  - name: license_number
+    type: text
+    config:
+      required: false
+    label: License Number
+  label: Primary Contact
+  description: The main account owner. Contact information is displayed across the
+    site.
+- name: location_information
+  type: field_group
+  config: {}
+  fields:
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Address
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Alabama
+      - Alaska
+      - Arizona
+      - Arkansas
+      - California
+      - Colorado
+      - Connecticut
+      - Delaware
+      - Florida
+      - Georgia
+      - Hawaii
+      - Idaho
+      - Illinois
+      - Indiana
+      - Iowa
+      - Kansas
+      - Kentucky
+      - Louisiana
+      - Maine
+      - Maryland
+      - Massachusetts
+      - Michigan
+      - Minnesota
+      - Mississippi
+      - Missouri
+      - Montana
+      - Nebraska
+      - Nevada
+      - New Hampshire
+      - New Jersey
+      - New Mexico
+      - New York
+      - North Carolina
+      - North Dakota
+      - Ohio
+      - Oklahoma
+      - Oregon
+      - Pennsylvania
+      - Rhode Island
+      - South Carolina
+      - South Dakota
+      - Tennessee
+      - Texas
+      - Utah
+      - Vermont
+      - Virginia
+      - Washington
+      - West Virginia
+      - Wisconsin
+      - Wyoming
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: State
+  - name: zip_code
+    type: number
+    label: Zip Code
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 99999
+      step: 
+  label: Location Information
+  description: Displays your main location in the header and footer of the site
+- name: social_accounts
+  type: field_group
+  config: {}
+  fields:
+  - name: instagram
+    type: text
+    config:
+      required: false
+    label: Instagram
+  - name: facebook
+    type: text
+    config:
+      required: false
+    label: Facebook
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+  - name: youtube
+    type: text
+    config:
+      required: false
+    label: Youtube
+  - name: linkedin
+    type: text
+    config:
+      required: false
+    label: Linkedin
+  - name: pinterest
+    type: text
+    config:
+      required: false
+    label: Pinterest
+  - name: zillow
+    type: text
+    config:
+      required: false
+    label: Zillow
+  - name: redfin
+    type: text
+    config:
+      required: false
+    label: Redfin
+  - name: realtor
+    type: text
+    config:
+      required: false
+    label: Realtor
+  - name: trulia
+    type: text
+    config:
+      required: false
+    label: Trulia
+  - name: reddit
+    type: text
+    config:
+      required: false
+    label: Reddit
+  label: Social Accounts
+  description: Social media accounts will update globally on the site.
+- name: search_engine_optimization
+  type: field_group
+  config: {}
+  fields:
+  - name: seo
+    type: include
+    config: {}
+    template: seo
+    label: SEO
+  label: Search Engine Optimization
+pages:
+- data/profile.yaml

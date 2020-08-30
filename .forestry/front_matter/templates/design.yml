@@ -1,0 +1,102 @@
+---
+label: Design
+hide_body: true
+fields:
+- name: logo_and_title
+  type: field_group
+  config: {}
+  fields:
+  - name: logo
+    type: file
+    config:
+      maxSize: 64
+    label: Logo
+  - name: site_title
+    type: text
+    config:
+      required: false
+    label: Site Title
+  - name: favicon
+    type: file
+    config:
+      maxSize: 64
+    label: Favicon
+  label: Logo and Title
+- name: home_slideshow
+  type: field_group
+  config: {}
+  fields:
+  - name: slideshow
+    type: field_group_list
+    fields:
+    - name: subtitle
+      type: text
+      config:
+        required: false
+      label: Subtitle
+    - name: heading
+      type: text
+      config:
+        required: false
+      label: Heading
+    - name: hero_body
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: Hero Body
+    - name: image
+      type: file
+      config:
+        maxSize: 64
+      label: Image
+    - name: link_text
+      type: text
+      config:
+        required: false
+      label: Link Text
+    - name: link
+      type: text
+      config:
+        required: false
+      label: Link
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Slideshow
+  label: Home Slideshow
+- name: banner
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Banner
+- name: footer
+  type: field_group
+  config: {}
+  fields:
+  - name: footer_logo
+    type: file
+    config:
+      maxSize: 64
+    label: Footer Logo
+  - name: footer_bio
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Footer Bio
+  label: Footer
+pages:
+- data/design.yaml

@@ -1,0 +1,94 @@
+{{ define "main" }}
+{{ $agentContact := .Params.contact }}
+{{ $agentDetails := .Params.details }}
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                {{ if $agentDetails.agent_photo }}
+                <img src="{{ $agentDetails.agent_photo }}" alt="">
+                {{ end }}
+                <div class="agent-title-container mt-5">
+                    {{ if $agentDetails.title }}
+                    <div class="columns mt-2 mb-0">
+                        <div class="column">
+                            <h6 class="title is-6 has-text-white">{{ $agentDetails.title }}</h6>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentDetails.license_type }}
+                    <div class="columns">
+                        <div class="column">
+                            <h6 class="title is-6 has-text-white">{{ $agentDetails.license_type }} {{ $agentDetails.license_number }}</h6>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.phone }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"/>
+                                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                              </svg>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="tel:{{ $agentContact.cell }}">{{ $agentContact.phone }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.cell }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-mobile" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"/>
+                                <rect x="7" y="4" width="10" height="16" rx="1" />
+                                <line x1="11" y1="5" x2="13" y2="5" />
+                                <line x1="12" y1="17" x2="12" y2="17.01" />
+                              </svg>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="tel:{{ $agentContact.cell }}">{{ $agentContact.cell }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentContact.email }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"/>
+                                <polyline points="3 9 12 15 21 9 12 3 3 9" />
+                                <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+                                <line x1="3" y1="19" x2="9" y2="13" />
+                                <line x1="15" y1="13" x2="21" y2="19" />
+                              </svg>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="mailto:{{ $agentContact.email }}">{{ $agentContact.email }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ if $agentDetails.website }}
+                    <div class="columns is-vcentered mb-0 is-mobile">
+                        <div class="column">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"/>
+                                <circle cx="12" cy="12" r="9" />
+                                <line x1="3.6" y1="9" x2="20.4" y2="9" />
+                                <line x1="3.6" y1="15" x2="20.4" y2="15" />
+                                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                <path d="M12.5 3a17 17 0 0 1 0 18" />
+                              </svg>
+                        </div>
+                        <div class="column has-text-left">
+                            <a href="{{ $agentDetails.website }}" target="_blank">{{ $agentDetails.website }}</a>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{{ end }}
