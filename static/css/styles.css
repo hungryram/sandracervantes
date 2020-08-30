@@ -235,6 +235,12 @@ a.navbar-link {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     transition: color .3s ease;
+    font-size: 14px;
+}
+
+div.navbar-dropdown {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 a.navbar-link:not(.is-arrowless)::after {
@@ -265,7 +271,7 @@ a.navbar-link:hover {
         color: black;
     }
     div.navbar-dropdown {
-        border-top: 2px solid #b83c30;
+        border-top: 2px solid #C69C6D;
     }
 }
 
