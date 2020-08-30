@@ -1,19 +1,19 @@
 ---
-primary_company_name: Wallstreet Realty
+primary_company_name: Superior Real Estate Services
 primary_contact:
-  full_name: John Pagani
+  full_name: Sandra Cervantes
   title: Broker
   mobile_phone: ''
-  email: john@wallstrealty.com
+  email: Sandra@SandraCervantes.com
   license_type: BRE License
-  license_number: '01926616'
-  phone: "(562) 222-8841"
+  license_number: '01191468'
+  phone: "(949) 283-2216"
 social_accounts:
-  instagram: https://www.instagram.com/wallstreet_realty/
-  facebook: http://www.facebook.com/wallstreetrealty
-  youtube: https://www.youtube.com/channel/UCUfZFe5DjSONvViNVFBrsGA
-  twitter: http://www.twitter.com/wallstreetr
-  linkedin: https://www.linkedin.com/company/wallstreet-realty/
+  instagram: ''
+  facebook: ''
+  youtube: ''
+  twitter: ''
+  linkedin: ''
   pinterest: ''
   zillow: ''
   redfin: ''
@@ -21,11 +21,10 @@ social_accounts:
   trulia: ''
   reddit: ''
 search_engine_optimization:
-  title_tag: Wallstreet Realty
-  meta_description: 'The #1 Luxury Real Estate Company in Southern California! Located
-    in Beverly Hills, California'
+  title_tag: Sandra Cervantes - Realty One group, Irvine CA
+  meta_description: Search homes for sale in southern California by Sandra Cervantes
 location_information:
-  address: 7007 Washington Blvd Suite 211
-  city: Whittier
+  address: '4000 Barranca Parkway #250'
+  city: 'Irvine '
   state: California
-  zip_code: 90602
+  zip_code: 92604
