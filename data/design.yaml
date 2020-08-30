@@ -1,22 +1,21 @@
 ---
 logo_and_title:
-  logo: "/uploads/wallstlogo1.png"
-  site_title: Wallstreet Realty
-  favicon: "/uploads/logo.png"
+  logo: "/uploads/realtyone-logo-new.png"
+  site_title: Realty One Group
+  favicon: "/uploads/favicon.png"
 home_slideshow:
   slideshow:
-  - heading: Wallstreet Realty
-    image: "/uploads/splash4.jpg"
-    link_text: Find your dream home
+  - heading: One Realty Group
+    image: "/uploads/ss1.jpg"
+    link_text: Search the MLS
     link: http://www.idxhome.com/homesearch/133408
     subtitle: ''
-    hero_body: Our philosophy is different than that of a franchised real estate company
-      because we realize each property is unique.
+    hero_body: 25 Years of Real Estate Experience
 banner:
-  image: "/uploads/whiteinterior.jpg"
+  image: "/uploads/shutterstock_150649961.jpg"
 footer:
-  footer_logo: "/uploads/wallstlogo1.png"
-  footer_bio: We take pride in providing our clients with exceptional service and
-    competitive rates in a no pressure environment. Our agents are selected for their
-    attentiveness to clients, their knowledge of the communities we service, and their
-    commitment to you – the real estate consumer.
+  footer_logo: "/uploads/realtyone-logo-new.png"
+  footer_bio: Cervantes has 25 years of real estate experience and is nationally recognized
+    multi-cultural, bilingual, housing expert and skilled negotiator.  Cervantes is
+    available 24/7, executes on compressed time frames, provides thorough reports
+    and delivers to all her clients.
