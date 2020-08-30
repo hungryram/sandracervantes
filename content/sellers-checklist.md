@@ -2,6 +2,9 @@
 meta_description = "Superior Real Estate Services provides valuable checklists before selling your home"
 title = "Sellers Checklist"
 title_tag = "Sellers Checklist - Sandra Cervantes Realty One Group"
+[menu.main]
+parent = "Sellers"
+weight = 2
 
 +++
 ![](/uploads/sellers_checklist.jpg)

@@ -2,6 +2,10 @@
 meta_description = "To learn about Public and Private Schools in your neighborhood I recommend the below two websites. Click on either logo to be redirected to the website and start researching."
 title = "School Ratings Information"
 title_tag = "School Ratings - Sandra Cervantes Realty One Group"
+[menu.main]
+name = "School Rating Information"
+parent = "Buyers"
+weight = 1
 
 +++
 ![](/uploads/school_ratings.jpg)

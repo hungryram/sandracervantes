@@ -2,6 +2,9 @@
 meta_description = "A title insurance policy protects a real estate owner or lender against any loss or damage they might experience because of liens, encumbrances, or defects in the title to said property, or the incorrectness of the related search."
 title = "What is Title Insurance"
 title_tag = "What is Title Insurance - Sandra Cervantes Realty One Group"
+[menu.main]
+parent = "Resources"
+weight = 4
 
 +++
 ![Insurance](/uploads/what_is_title_insurance.jpg)
