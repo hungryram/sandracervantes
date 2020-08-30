@@ -1,7 +1,8 @@
   {{ partial "global/head.html" . }}
 {{ partial "global/navbar.html" . }}
 
-<div style="height: 25vh;background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url({{ .Site.Data.design.banner.image | absURL }}); background-size: cover;background-position: center" class="page-banner">
+<div style="height: 35vh;background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),url({{ .Site.Data.design.banner.image | absURL }}); background-size: cover;background-position: center" class="page-banner">
+      <h1 class="title is-3 has-text-white is-size-4-mobile">{{ .Title }}</h1>
 </div>
 <main>
 {{ block "main" . }}

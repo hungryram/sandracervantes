@@ -201,21 +201,29 @@ section.hero.slick-slide {
   
 /* BANNER */
 
-.page-banner {
-    margin-top: -53px;
+div.page-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* NAVBAR */
 
-div.hero-head {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+    background-color: transparent!important;
 }
 
 span.navbar-burger {
-    color: #fff;
+    color: #000;
+}
+
+.navbar-burger:hover {
+    background-color: rgba(0,0,0,.05);
+    transition: all .3s ease;
+}
+
+.navbar-burger.burger {
+    background: rgb(223 223 223 / 49%);
 }
 
 nav.navbar {
@@ -270,6 +278,7 @@ a.navbar-link:hover {
     .navbar-dropdown a.navbar-item {
         color: black;
     }
+    
     div.navbar-dropdown {
         border-top: 2px solid #C69C6D;
     }
@@ -326,6 +335,14 @@ a.navbar-link:hover {
 
     .navbar-dropdown.is-active {
         display: block;
+    }
+
+    a.navbar-item, a.navbar-link {
+        color: #fff;
+    }
+
+    a.navbar-link:not(.is-arrowless)::after {
+        border-color: #fff;
     }
 }
 
@@ -410,6 +427,12 @@ div.team-border:after {
 }
 
 /* LISTING THUMBNAIL */
+
+.listing-bg {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: #f3f3f3;
+}
 
 .featured-listing-content p {
     color: #999;
