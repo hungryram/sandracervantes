@@ -53,9 +53,9 @@
       </div>
       <div class="column has-text-centered-mobile">
         <ul>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
-          <li class="is-inline-block mr-4"><a href="">Accessibility</a></li>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
+          {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+          <li class="is-inline"><a href="{{ .Permalink }}" class="is-size-7 mx-2">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
     </div>
