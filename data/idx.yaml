@@ -1,2 +1,7 @@
 ---
-ihomefinder_client_id: 133408
+ihf_client_id: 133262
+enable_idx: true
+incomplete_subdomain: 
+complete_subdomain: sandracervantes.idxhome.com
+enable_google_recaptcha: false
+google_site_key: 6LcdfpgUAAAAACVR_RRPmjr0AR-qXQcBGdopY1MS

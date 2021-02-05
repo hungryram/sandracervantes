@@ -29,7 +29,7 @@
                   <div class="navbar-dropdown">
                       {{ range .Children }}
                           
-                          <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL }}{{ end }}">
+                          <a class="navbar-item {{ if .HasChildren }}navbar-link first-drop is-hoverable{{ end }}" href="{{ if .HasChildren }}javascript:;{{ else }}{{ .URL | absURL }}{{ end }}">
                           {{ .Name }}
                           </a>
                       

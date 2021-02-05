@@ -34,14 +34,14 @@
       </div>
     </div>
     <div class="columns">
-      <div class="column has-text-centered-mobile">
+      <div class="column has-text-centered-mobile is-size-7">
         <small>&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.primary_company_name }}</small> &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a>
       </div>
       <div class="column has-text-centered-mobile">
         <ul>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
-          <li class="is-inline-block mr-4"><a href="">Accessibility</a></li>
-          <li class="is-inline-block mr-4"><a href="">Privacy Policy</a></li>
+          {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+          <li class="is-inline"><a href="{{ .Permalink }}" class="is-size-7 mx-2">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
     </div>

@@ -1,6 +1,6 @@
 
 {{ partial "global/navbar.html" . }}
-
+{{ $ihfID := .Site.Data.idx.ihf_client_id }}
 <div class="home-slide">
 {{ range .Site.Data.design.home_slideshow.slideshow }}
 <section class="hero lax" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.7)),url({{ .image }});height:100vh;background-size:cover;background-position:center" data-lax-bg-pos-y="0 0, vh 200 500">
@@ -26,7 +26,11 @@
     <div class="container">
       <div class="columns has-text-left has-text-white is-mobile is-vcentered">
         <div class="column quicksearch">
-          <script type="text/javascript" src="https://www.idxhome.com/site/listing/search/widget/{{ $.Site.Data.idx.ihomefinder_client_id }}?style=horizontal"></script>
+          {{ if $.Site.Data.idx.incomplete_subdomain }}
+          <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+          {{ else }}
+          <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}/site/listing/search/widget/{{ $ihfID }}?style=horizontal"></script>
+          {{ end }}
         </div>
       </div>
       </div>

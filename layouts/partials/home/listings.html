@@ -9,8 +9,12 @@
             </div>
             <div class="columns">
                 <div class="column">
-                    <script type="text/javascript" src="https://www.idxhome.com/site/listing/gallery/slider/{{ $.Site.Data.idx.ihomefinder_client_id }}?columns=3&rows=1&effect=fade&auto=false"></script>
-                </div>
+                    {{ if $.Site.Data.idx.incomplete_subdomain }}
+                    <script type="text/javascript" src="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/site/listing/gallery/slider/{{ $.Site.Data.idx.ihf_client_id }}?columns=3&amp;rows=1&amp;effect=fade&amp;auto=false"></script>
+                    {{ else }}
+                    <script type="text/javascript" src="https://{{ $.Site.Data.idx.complete_subdomain }}/site/listing/gallery/slider/{{ $.Site.Data.idx.ihf_client_id }}?columns=3&amp;rows=1&amp;effect=fade&amp;auto=false"></script>
+                    
+                    {{ end }}                </div>
             </div>
         </div>
     </div>

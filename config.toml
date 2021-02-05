@@ -1,14 +1,14 @@
-baseURL = "https://sandracervantes.netlify.app/"
+baseURL = "https://www.sandracervantes.com/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
 name = "Featured Properties"
 parent = "Property Search"
-url = "https://www.idxhome.com/featured/133408"
+url = "https://sandracervantes.idxhome.com/featured/133262"
 weight = 1
 [[menu.main]]
 name = "Login"
-url = "https://www.idxhome.com/homesearch/145641"
+url = "https://sandracervantes.idxhome.com/homesearch/145641"
 weight = 8
 [[menu.main]]
 name = "Resources"
@@ -16,7 +16,7 @@ weight = 5
 [[menu.main]]
 name = "Valuation Request"
 parent = "Sellers"
-url = "http://www.idxhome.com/valuation/133408"
+url = "https://www.sandracervantes.com/home-value-request"
 weight = 1
 [[menu.main]]
 name = "Sellers"
@@ -27,17 +27,17 @@ weight = 3
 [[menu.main]]
 name = "Open Homes"
 parent = "Property Search"
-url = "http://www.idxhome.com/openhomes/133408"
+url = "https://sandracervantes.idxhome.com/openhomes/133262"
 weight = 4
 [[menu.main]]
 name = "Advanced Search"
 parent = "Property Search"
-url = "http://www.idxhome.com/listing/search/advanced/133408/13"
+url = "https://sandracervantes.idxhome.com/listing/search/advanced/133262/13"
 weight = 3
 [[menu.main]]
 name = "Search"
 parent = "Property Search"
-url = "http://www.idxhome.com/homesearch/133408"
+url = "https://sandracervantes.idxhome.com/homesearch/133262"
 weight = 2
 [[menu.main]]
 name = "Contact"

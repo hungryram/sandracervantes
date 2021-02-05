@@ -1,0 +1,309 @@
+{{ define "main" }}
+<div class="section">
+    <div class="container">
+        <div class="columns pb-6">
+            <div class="column is-three-fifths is-offset-one-fifth">
+                <h1 class="title is-4">What's your home really worth?</h1>
+                <p>Planning on selling your home? Please fill the form below and we'll contact you with an assessment of your property value.</p>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-three-fifths is-offset-one-fifth">
+              {{ if $.Site.Data.idx.enable_idx }}
+              {{ if $.Site.Data.idx.incomplete_subdomain }}
+              <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+              {{ else }}
+              <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.complete_subdomain }}/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+              {{ end }}
+              {{ end }}
+              {{ if eq $.Site.Data.idx.enable_idx false }}
+                <form name="Home Valuation Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" id="netlify-home-valuation">
+                <input name="bot-field" type="hidden"/>
+              {{ end }}
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Name</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="Required" required name="name">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Email</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="Required" required name="email">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Phone</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="Required" required name="phone">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Address</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="" required name="address">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">City</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="" required name="city">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">State</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <p class="control">
+                              <input class="input" type="text" placeholder="" required name="state">
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Property Type</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-narrow">
+                            <div class="control">
+                              <div class="select is-fullwidth">
+                                <select name="propertyType">
+                                    <option selected="selected" value="SFR">
+                                        Single Family House
+                                    </option>
+                                    <option value="CND">
+                                        Condominium
+                                    </option>
+                                    <option value="LL">
+                                        Lots / Land
+                                    </option>
+                                    <option value="RI">
+                                        Multi-Unit Residential
+                                    </option>
+                                    <option value="COM">
+                                        Commercial
+                                    </option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label">Condition of Property</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-narrow">
+                            <div class="control">
+                                <label class="radio"><input id="ihfValuation_Condition" name="condition" type="radio" value="Excellent"> Excellent</label> <label class="radio"><input name="condition" type="radio" value="Good"> Good</label> <label class="radio"><input name="condition" type="radio" value="Fair"> Fair</label> <label class="radio"><input name="condition" type="radio" value="Needs Work"> Needs Work</label> <label class="radio"><input name="condition" type="radio" value="Poor"> Poor</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label">Bedrooms</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-narrow">
+                            <div class="control">
+                                <label class="radio"><input id="ihfValuation_Bedrooms" name="bedrooms" type="radio" value="1"> 1</label> <label class="radio"><input name="bedrooms" type="radio" value="2"> 2</label> <label class="radio"><input name="bedrooms" type="radio" value="3"> 3</label> <label class="radio"><input name="bedrooms" type="radio" value="4"> 4</label> <label class="radio"><input name="bedrooms" type="radio" value="4+"> 5 or more</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <label class="label">Bathrooms</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-narrow">
+                            <div class="control">
+                                <label class="radio"><input id="ihfValuation_Bathrooms" name="bathrooms" type="radio" value="1"> 1</label> <label class="radio"><input name="bathrooms" type="radio" value="2"> 2</label> <label class="radio"><input name="bathrooms" type="radio" value="3"> 3</label> <label class="radio"><input name="bathrooms" type="radio" value="3+"> 4 or more</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Additional Rooms/Features</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <div class="control">
+                                <textarea class="textarea" id="additionalRooms" placeholder="Please list additional rooms and describe any special features and upgrades. For example: new roof, custom kitchen, near park, etc." name="additionalRooms" rows="3" style="height: 80px;"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Approx. Size</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control">
+                                  <input class="input" type="text" placeholder="" name="squareFeet">
+                                </p>
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Sq. Ft.
+                                  </a>
+                                </p>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Approx. Age of Kitchen</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control">
+                                  <input class="input" type="text" placeholder="" name="kitchenAge">
+                                </p>
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Years
+                                  </a>
+                                </p>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Approx. Age of Baths</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field is-expanded">
+                            <div class="field has-addons">
+                                <p class="control">
+                                  <input class="input" type="text" placeholder="" name="bathsAge">
+                                </p>
+                                <p class="control">
+                                  <a class="button is-static">
+                                    Years
+                                  </a>
+                                </p>
+                              </div>
+                              <p>Please provide the following information so we can contact you with your property valuation report.</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                          <label class="label">Comments</label>
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <div class="control">
+                                <textarea class="textarea" id="additionalRooms" placeholder="" name="comments" rows="3" style="height: 80px;"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {{ if $.Site.Data.idx.enable_google_recaptcha }}
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <div class="control">
+                              <div class="g-recaptcha" data-sitekey="{{ $.Site.Data.idx.google_site_key }}"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {{ end }}
+                      
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <!-- Left empty for spacing -->
+                        </div>
+                        <div class="field-body">
+                          <div class="field">
+                            <div class="control">
+                              <button class="button">
+                                Send message
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="field is-horizontal">
+                        <div class="field-label">
+                          <!-- Left empty for spacing -->
+                        </div>
+                        <div class="field-body">
+                          <div class="field mt-5">
+                            <div class="control content">
+                              <label class="checkbox content">
+                                <input type="checkbox" required>
+                                <span class="is-size-7">By submitting this form you confirm you have read and agreed to our <a href="/legal/terms-and-conditions">Terms and Conditions</a> and <a href="/legal/privacy-policy">Privacy Policy.</a> You consent to having this website store the submitted information so we can respond to the inquiry. Don't worry, you can request to have your information removed anytime.</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}
