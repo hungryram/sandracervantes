@@ -25,14 +25,14 @@
         <img src="{{ $footerDesign.footer_logo | absURL }}" alt="{{ .Site.Data.profile.primary_company_name }}" width="150px" class="mb-5">
         {{ else }}
         {{ end }}
-        <h2 class="title is-6 mb-0 has-text-white"></h2>
+        <h2 class="title is-6 mb-0 has-text-black"></h2>
         <p>{{ $footerContact.license_type }} {{ $footerContact.license_number }}</p>
         {{ if $footerDesign.footer_bio }}
           <p class="pb-6">{{ $footerDesign.footer_bio }}</p>
         {{ end }}
       </div>
       <div class="column">
-        <h4 class="title is-6 has-text-white is-uppercase">Links</h4>
+        <h4 class="title is-6 has-text-black is-uppercase">Links</h4>
         <ul>
           <li><a href="{{ .Site.BaseURL }}">Home</a></li>
           <li><a href="https://sandracervantes.idxhome.com/featured/133262">Featured Listings</a></li>
@@ -42,9 +42,9 @@
         </ul>
       </div>
       <div class="column">
-        <h4 class="title is-6 has-text-white is-uppercase">Contact</h4>
+        <h4 class="title is-6 has-text-black is-uppercase">Contact</h4>
             <p><a href="mailto:{{ $footerContact.email }}">{{ $footerContact.email }}</a></p>
-            <p><a href="tel:{{ $footerContact.phone }}" class="has-text-white">{{ $footerContact.phone }}</a></p>
+            <p><a href="tel:{{ $footerContact.phone }}" class="has-text-black">{{ $footerContact.phone }}</a></p>
       </div>
     </div>
     <div class="columns">
