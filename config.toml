@@ -2,28 +2,9 @@ baseURL = "https://www.sandracervantes.com/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
-name = "Featured Properties"
-parent = "Property Search"
-url = "https://sandracervantes.idxhome.com/featured/133262"
-weight = 1
-[[menu.main]]
-name = "Login"
-url = "https://sandracervantes.idxhome.com/homesearch/145641"
-weight = 8
-[[menu.main]]
-name = "Resources"
-weight = 5
-[[menu.main]]
-name = "Valuation Request"
-parent = "Sellers"
-url = "https://www.sandracervantes.com/home-value-request"
-weight = 1
-[[menu.main]]
-name = "Sellers"
-weight = 4
-[[menu.main]]
-name = "Buyers"
-weight = 3
+name = "Contact"
+url = "/contact"
+weight = 6
 [[menu.main]]
 name = "Open Homes"
 parent = "Property Search"
@@ -40,9 +21,28 @@ parent = "Property Search"
 url = "https://sandracervantes.idxhome.com/homesearch/133262"
 weight = 2
 [[menu.main]]
-name = "Contact"
-url = "/contact"
+name = "Valuation Request"
+parent = "Sellers"
+url = "https://www.sandracervantes.com/home-value-request"
+weight = 1
+[[menu.main]]
+name = "Featured Properties"
+parent = "Property Search"
+url = "https://sandracervantes.idxhome.com/featured/133262"
+weight = 1
+[[menu.main]]
+name = "Login"
+url = "https://sandracervantes.idxhome.com/organizer/login/133262"
 weight = 7
+[[menu.main]]
+name = "Resources"
+weight = 5
+[[menu.main]]
+name = "Sellers"
+weight = 4
+[[menu.main]]
+name = "Buyers"
+weight = 3
 [[menu.main]]
 name = "Property Search"
 weight = 2
