@@ -7,7 +7,7 @@
     <div class="columns">
       <div class="column is-4">
         {{ if $footerDesign.footer_logo }}
-          <img src="{{ $footerDesign.footer_logo | absURL }}" alt="{{ .Site.Data.profile.primary_company_name }}" width="150px" class="mb-5">
+          <img src="{{ $footerDesign.footer_logo | absURL }}" alt="{{ .Site.Data.profile.primary_company_name }}" width="300" class="mb-5">
         {{ else }}
         {{ end }}
         <h2 class="title is-6 mb-0 has-text-black"></h2>
@@ -15,7 +15,7 @@
         {{ if $footerDesign.footer_bio }}
           <p class="pb-6">{{ $footerDesign.footer_bio }}</p>
         {{ end }}
-        <img src="/uploads/nar.jpg" alt="">
+
       </div>
       <div class="column">
         <h4 class="title is-6 has-text-black is-uppercase">Links</h4>
@@ -31,6 +31,15 @@
         <h4 class="title is-6 has-text-black is-uppercase">Contact</h4>
             <p><a href="mailto:{{ $footerContact.email }}">{{ $footerContact.email }}</a></p>
             <p><a href="tel:{{ $footerContact.phone }}">{{ $footerContact.phone }}</a></p>
+      </div>
+      <div class="column has-text-centered">
+
+                <!--(c)2013.  Certified Luxury Home Marketing Specialist is a registered trademark of The Institute for Luxury Home Marketing.  Unauthorized use of the mark or associated graphics is strictly prohibited.-->
+                <a href="https://www.luxuryhomemarketing.com/clhms/mini-verified.html?m=070c0a11a2a031d3ac14fc3a4b14fd3f" onclick="window.open('https://www.luxuryhomemarketing.com/clhms/mini-verified.html?m=070c0a11a2a031d3ac14fc3a4b14fd3f','_blank','width=700,height=470,screenleft=100,screentop=100,left=100,top=100,scrollbars=1');return false;" >
+                  <img src="https://www.luxuryhomemarketing.com/en/logo.html?m=070c0a11a2a031d3ac14fc3a4b14fd3f&v=10" border="0"/>
+                </a>
+                <img src="/uploads/nar.jpg" alt="" class="mt-3">
+
       </div>
     </div>
     <div class="columns">
