@@ -4,7 +4,7 @@ title = "Process of an Escrow"
 title_tag = "Process of an Escrow - Sandra Cervantes Realty One Group"
 [menu.main]
 parent = "Resources"
-weight = 2
+weight = 3
 
 +++
 ![](/uploads/process_escrow.jpg)

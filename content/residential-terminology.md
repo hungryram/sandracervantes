@@ -4,7 +4,7 @@ title = "Residential Terminology"
 title_tag = "Residential Terminology - Sandra Cervantes Realty One Group"
 [menu.main]
 parent = "Resources"
-weight = 1
+weight = 2
 
 +++
 ![](/uploads/residential_terminology.jpg)

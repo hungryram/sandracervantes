@@ -2,6 +2,9 @@
 meta_description = ""
 title = "Luxury Home Marketing"
 title_tag = ""
+[menu.main]
+parent = "Resources"
+weight = 1
 
 +++
 _<!--_(c)2013. Certified Luxury Home Marketing Specialist is a registered trademark of The Institute for Luxury Home Marketing. Unauthorized use of the mark or associated graphics is strictly prohibited._-->_

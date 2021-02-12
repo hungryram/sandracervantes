@@ -5,7 +5,7 @@ title_tag = "Title Escrow Mortgage Terminology - Sandra Cervantes"
 [menu.main]
 name = "Title, Escrow & Mortgage Terminology"
 parent = "Resources"
-weight = 5
+weight = 6
 
 +++
 ![](/uploads/title_mortgage_terminology.jpg)

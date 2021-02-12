@@ -2,10 +2,6 @@ baseURL = "https://www.sandracervantes.com/"
 languageCode = "en-us"
 summaryLength = 30
 [[menu.main]]
-name = "Contact"
-url = "/contact"
-weight = 6
-[[menu.main]]
 name = "Open Homes"
 parent = "Property Search"
 url = "https://sandracervantes.idxhome.com/openhomes/133262"
@@ -30,6 +26,10 @@ name = "Featured Properties"
 parent = "Property Search"
 url = "https://sandracervantes.idxhome.com/featured/133262"
 weight = 1
+[[menu.main]]
+name = "Contact"
+url = "/contact"
+weight = 6
 [[menu.main]]
 name = "Login"
 url = "https://sandracervantes.idxhome.com/organizer/login/133262"

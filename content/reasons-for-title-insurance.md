@@ -4,7 +4,7 @@ title = "Reasons for Title Insurance"
 title_tag = "Reasons for Title Insurance - Sandra Cervantes Realty One Group"
 [menu.main]
 parent = "Resources"
-weight = 6
+weight = 7
 
 +++
 ![](/uploads/reasons_for_title_insurance.jpg)
