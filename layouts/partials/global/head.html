@@ -6,9 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="{{ .Permalink }}"/>
 
-<!-- START SEO -->
+{%- comment -%} START SEO {%- endcomment -%}
 {{ partial "global/seo.html" . }}
-<!-- RESOURCES -->
+
+{%- comment -%} START SCHEMA {%- endcomment -%}
+{{ if $.IsHome }}
+{{ partial "global/schema.html" . }}
+{{ end }}
+
+
 <link rel="stylesheet" href="{{.Site.BaseURL}}css/styles.css">
 {{ if $.IsHome }}
 <link rel="stylesheet" href="{{.Site.BaseURL}}css/ihf_index.css">

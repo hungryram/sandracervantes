@@ -1,0 +1,21 @@
+{{ $profile := $.Site.Data.profile }}
+{{ $social := $.Site.Data.profile.social_accounts }}
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "LocalBusiness",
+    "name" : "{{ $profile.primary_contact.full_name }}",
+    "description" : "{{ $profile.search_engine_optimization.meta_description }}",
+    "logo" : "{{ .Site.Data.design.logo_and_title.logo | absURL }}",
+    "image" : "{{ .Site.Data.design.logo_and_title.logo | absURL }}",
+    "telephone" : "{{ $profile.primary_contact.phone }}",
+    "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "{{ $profile.location_information.address }}",
+    "addressLocality" : "{{ $profile.location_information.city }}",
+    "addressRegion" : "{{ $profile.location_information.state }}",
+    "postalCode" : "{{ $profile.location_information.zip_code }}"
+    },
+    "url" : "{{ .Site.BaseURL }}"
+}
+</script>
