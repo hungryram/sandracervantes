@@ -6,10 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="{{ .Permalink }}"/>
 
-{%- comment -%} START SEO {%- endcomment -%}
 {{ partial "global/seo.html" . }}
 
-{%- comment -%} START SCHEMA {%- endcomment -%}
 {{ if $.IsHome }}
 {{ partial "global/schema.html" . }}
 {{ end }}
