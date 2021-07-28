@@ -52,43 +52,103 @@
                 <div class="column">
                   <h2 class="title is-3">Send an Email</h2>
                   <p>We look forward to helping you find your new home</p>
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-page mt-6">
-                        <input name="bot-field" type="hidden"/>
-                        <div class="field is-horizontal">
-                          <div class="field-body">
-                            <div class="field">
-                              <p class="control is-expanded">
-                                <input class="input" type="text" placeholder="First Name" name="first name">
-                              </p>
-                            </div>
-                            <div class="field">
-                              <p class="control">
-                                <input class="input" type="text" placeholder="Last Name" name="last name">
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        
+                  {{ if $.Site.Data.idx.enable_idx }}
+                  {{ if $.Site.Data.idx.incomplete_subdomain }}
+                  <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.incomplete_subdomain }}.idxhome.com/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+                  {{ else }}
+                  <form id="ihf-contact-request-form" data-ihf-event="contact-form-submit" action="https://{{ $.Site.Data.idx.complete_subdomain }}/contact/{{ $.Site.Data.idx.ihf_client_id }}" method="POST" data-ihf-event-bound="true">
+                  {{ end }}
+                    <div class="field is-horizontal">
+                      <div class="field-body">
                         <div class="field">
-                          <div class="control">
-                            <input class="input" type="text" placeholder="Phone" name="phone">
-                          </div>
-                        </div>
-              
-                        <div class="field">
-                          <div class="control">
-                            <input class="input" type="email" placeholder="Email" name="email address">
-                          </div>
+                          <p class="control is-expanded">
+                            <input class="input" type="text" placeholder="Name" name="contactName" required>
+                          </p>
                         </div>
                         <div class="field">
-                          <div class="control">
-                            <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
-                          </div>
+                          <p class="control">
+                            <input class="input" type="text" placeholder="Email" name="email" required>
+                          </p>
                         </div>
+                        <div class="field">
+                          <p class="control">
+                            <input class="input" type="text" placeholder="Phone" name="phone" required>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                          <textarea id="message" placeholder="Message" name="message" class="textarea" style="height: 140px;" rows="3"> </textarea>
+                      </div>
+                    </div>
+                    {{ if $.Site.Data.idx.enable_google_recaptcha }}
+                    <div class="field-body">
+                      <div class="field">
                         <div class="control">
-                          <button class="button">Submit</button>
+                          <div class="g-recaptcha" data-sitekey="{{ $.Site.Data.idx.google_site_key }}"></div>
                         </div>
-                      </form>
+                      </div>
+                    </div>
+                  {{ end }}
+                    <div class="control">
+                      <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }};width:305px">Submit</button>
+                    </div>
+                    <div class="field mt-5">
+                      <div class="control">
+                        <label class="checkbox">
+                          <input type="checkbox" required>
+                          <span class="is-size-7">By submitting this form you confirm you have read and agreed to our <a href="">Terms of service</a> and <a href="">Privacy Policy.</a> You consent to having this website store the submitted information so we can respond to the inquiry. Don't worry, you can request to have your information removed anytime.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                  {{ else }}
+                  <form name="Home Widget Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+                    <input name="bot-field" type="hidden"/>
+      
+                    <div class="field">
+                      <p class="control is-expanded">
+                        <input class="input" type="text" placeholder="First Name" name="first name">
+                      </p>
+                    </div>
+      
+                    <div class="field">
+                      <p class="control">
+                        <input class="input" type="text" placeholder="Last Name" name="last name">
+                      </p>
+                    </div>
+                    
+                    <div class="field">
+                      <div class="control">
+                        <input class="input" type="text" placeholder="Phone" name="phone">
+                      </div>
+                    </div>
+          
+                    <div class="field">
+                      <div class="control">
+                        <input class="input" type="email" placeholder="Email" name="email address">
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <textarea class="textarea" placeholder="Your Message" name="message"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="control">
+                      <button class="button" style="{{ safeHTMLAttr (printf "background-color: %s" $.Site.Data.design.colors.button_background_colors) }};width:305px">Submit</button>
+                    </div>
+                    <div class="field mt-5">
+                      <div class="control content">
+                        <label class="checkbox">
+                          <input type="checkbox" required>
+                          <span class="is-size-7">By submitting this form you confirm you have read and agreed to our <a href="/legal/terms-and-conditions">Terms and Conditions</a> and <a href="/legal/privacy-policy">Privacy Policy.</a> You consent to having this website store the submitted information so we can respond to the inquiry. Don't worry, you can request to have your information removed anytime.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
+                  {{ end }}
                 </div>
             </div>
         </div>
