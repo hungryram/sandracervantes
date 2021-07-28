@@ -3,8 +3,8 @@ meta_description = "Highly successful real estate business owner and investor. S
 title = "About"
 title_tag = "About Sandra Cervantes - Realty One Group"
 [menu.main]
-parent = "Contact"
-weight = 1
+parent = "Resources"
+weight = 8
 
 +++
 Sandra Cervantes is a visionary with the business acumen to take a deal from conception to fruition. Ms. Cervantes is a highly successful real estate business owner and investor with an uncanny ability to bring together the right people in the right places at the right time. She believes when convenience and opportunity coincide – the synergy is infinite. The National Association of Hispanic Real Estate Professionals (NAHREP) has recognized Cervantes as one of the top 250 real estate professional in the nation. She has worked in the field of housing and community development throughout her career and is an advocate on home ownership education and sustainability issues. The Sandra Cervantes team is made up of highly -skilled individuals whose highest priority is serving you. We are here to transform your expectations about buying and selling your home. Say goodbye to the days when a real estate transaction was time consuming and exhausting! Instead experience the one-stop-shop Cervantes difference.
